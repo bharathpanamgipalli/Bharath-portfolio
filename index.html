@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bharath Panamgipalli - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="magic-bg"></div>
+
+  <header>
+    <h1>Bharath Panamgipalli</h1>
+    <p>Java Developer | AI Enthusiast | SQL </p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Technical Skills</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>Vision</h2>
+    <p>Artificial Intelligence | Java Developer | Aspiring Software Developer</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Tech in Computer Science</strong> – Dr.M.G.R Educational and Research Institute – 2021–2025</li>
+      <li><strong>Intermediate</strong> – Sri Sarada Educational Intitutions  – 2019–2021</li>
+      <li><strong>High School</strong> – S.V.V.E.M High School – 2019</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Programming:  Java, C, C++</li>
+      <li>Web: HTML, CSS, JavaScript, Angular.js, Flask</li>
+      <li>Mobile: Android Studio, Java/Kotlin</li>
+      <li>Tools: Power BI, Git, VS Code,Intellij </li>
+      <li>Concepts: Data Structures, AI, Java DEVELOPMENT</li>
+    </ul>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p><a href="resume.pdf" download>Download Here </a></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Phone Number : +91 6304764478 </p>
+    <p>Email: <a href="psvnbharath@gmail.com">psvnbharath@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/bharathpanamgipalli" target="_blank">linkedin.com/in/bharathpanamgipalli</a></p>
+    <p>GitHub: <a href="https://github.com/bharathpanamgipalli" target="_blank">github.com/bharathpanamgipalli</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bharath Panamgipalli. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Optional: Add animated floating cubes
+    const bg = document.getElementById("magic-bg");
+    for (let i = 0; i < 30; i++) {
+      const cube = document.createElement("div");
+      cube.className = "magic-cube";
+      const size = Math.random() * 30 + 10;
+      cube.style.width = cube.style.height = size + "px";
+      cube.style.left = Math.random() * 100 + "vw";
+      cube.style.top = Math.random() * 100 + "vh";
+      cube.style.animationDuration = Math.random() * 20 + 10 + "s";
+      bg.appendChild(cube);
+    }
+  </script>
+</body>
+</html>
