@@ -1,203 +1,140 @@
-/* Reset and base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: #eee;
-  overflow-x: hidden;
-  padding-bottom: 50px;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bharath Panamgipalli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
 
-/* Text enhancements */
-h1, h2, h3, p, li, a {
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-}
+<body>
+  <div id="magic-bg"></div>
 
-/* Floating cube background */
-#magic-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  overflow: hidden;
-}
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">Bharath</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#internships">Training</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-#magic-bg::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(15, 32, 39, 0.8);
-  z-index: 0;
-}
+  <header class="hero" id="about">
+    <div class="container" data-aos="fade-up">
+      <h2>Hi, I'm Bharath Panamgipalli</h2>
+      <p class="tagline">Java Developer | AI & ML Enthusiast | SQL Specialist</p>
+      <p class="intro">Passionate about crafting efficient code, solving complex problems, and building meaningful tech experiences. Currently exploring AI/ML applications in real-world scenarios.</p>
+      <a href="#contact" class="btn">Let's Connect</a>
+    </div>
+  </header>
 
-.magic-cube {
-  position: absolute;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  border-radius: 8px;
-  opacity: 0.6;
-  animation: floatRotate infinite ease-in-out;
-}
+  <section id="education" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Tech in Computer Science</strong> – Dr. M.G.R Institute (2021–2025)</li>
+        <li><strong>Intermediate</strong> – Sri Sarada Institutions (2019–2021)</li>
+        <li><strong>High School</strong> – S.V.V.E.M High School (2019)</li>
+      </ul>
+    </div>
+  </section>
 
-@keyframes floatRotate {
-  0% {
-    transform: translateZ(0) rotate(0deg);
-    opacity: 0.8;
-  }
-  50% {
-    transform: translateY(-20px) rotate(180deg);
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateZ(0) rotate(360deg);
-    opacity: 0.8;
-  }
-}
+  <section id="skills" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> Java, Python, C, C++</li>
+        <li><strong>Web Dev:</strong> HTML, CSS, JS, Angular.js, Flask</li>
+        <li><strong>Mobile:</strong> Android Studio (Java/Kotlin)</li>
+        <li><strong>Tools:</strong> Git, VS Code, IntelliJ, Power BI</li>
+        <li><strong>Concepts:</strong> DSA, AI/ML, SQL, OOPs</li>
+      </ul>
+    </div>
+  </section>
 
-/* Header */
-header {
-  background: #1f2e3b;
-  padding: 2rem 1rem;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
+  <section id="projects" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Phishing Domain Detection</h3>
+          <p>Random Forest algorithm to detect phishing websites based on URL features with backend API deployment.</p>
+        </div>
+        <div class="card">
+          <h3>Cancer Cell Detection</h3>
+          <p>AI-powered image detection using Otsu’s and Watershed segmentation with MATLAB.</p>
+        </div>
+        <div class="card">
+          <h3>Crypto Investment Predictions</h3>
+          <p>LSTM + MLP model with Streamlit UI to predict digital asset trends.</p>
+        </div>
+        <div class="card">
+          <h3>Hospital Management System</h3>
+          <p>Python-Flask web app to manage appointments and scheduling on a local server.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-header h1 {
-  font-size: 2.5rem;
-  color: #00d2ff;
-}
+  <section id="internships" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Internships & Training</h2>
+      <ul>
+        <li><strong>Apprenticeship – QSpiders</strong> – Core Java & SQL training with real-time web project experience.</li>
+        <li><strong>Data Science – TeachNook</strong> – Covered Python, NumPy, Pandas, Matplotlib, ML intro via scikit-learn.</li>
+      </ul>
+    </div>
+  </section>
 
-header p {
-  font-size: 1.2rem;
-  color: #ffffffc0;
-}
+  <section id="resume" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Resume</h2>
+      <a class="btn" href="resume.pdf" download>Download Resume</a>
+    </div>
+  </section>
 
-/* Navigation */
-nav {
-  background: #263545;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
+  <section id="contact" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:psvnbharath@gmail.com">psvnbharath@gmail.com</a></p>
+      <p>Phone: +91 6304764478</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/itz-bharath" target="_blank">itz-bharath</a></p>
+      <p>GitHub: <a href="https://github.com/bharathpanamgipalli" target="_blank">bharathpanamgipalli</a></p>
+    </div>
+  </section>
 
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0.75rem;
-}
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Bharath Panamgipalli. All rights reserved.</p>
+    </div>
+  </footer>
 
-nav ul li {
-  margin: 0 20px;
-}
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const bg = document.getElementById("magic-bg");
+    for (let i = 0; i < 30; i++) {
+      const cube = document.createElement("div");
+      cube.className = "magic-cube";
+      const size = Math.random() * 30 + 10;
+      cube.style.width = cube.style.height = size + "px";
+      cube.style.left = Math.random() * 100 + "vw";
+      cube.style.top = Math.random() * 100 + "vh";
+      cube.style.animationDuration = Math.random() * 20 + 10 + "s";
+      bg.appendChild(cube);
+    }
+  </script>
+</body>
 
-nav ul li a {
-  color: #eee;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s;
-}
-
-nav ul li a:hover {
-  color: #00c6ff;
-  text-shadow: 0 0 12px #00c6ff;
-}
-
-/* Sections */
-section {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-h2 {
-  color: #00c6ff;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  border-bottom: 2px solid #00c6ff;
-  padding-bottom: 0.5rem;
-}
-
-ul {
-  list-style: disc inside;
-  margin-top: 1rem;
-}
-
-li {
-  margin-bottom: 0.75rem;
-}
-
-/* Links and Buttons */
-a {
-  color: #1abc9c;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #00e6e6;
-}
-
-section#resume a {
-  background: #00c6ff;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  display: inline-block;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-section#resume a:hover {
-  background: #008fcc;
-}
-
-/* Contact Section */
-#contact p {
-  margin-bottom: 0.8rem;
-}
-
-/* Footer */
-footer {
-  background: #1f2e3b;
-  color: #ccc;
-  text-align: center;
-  padding: 1.2rem 0;
-  margin-top: 2rem;
-  font-size: 0.95rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  section {
-    padding: 1.5rem;
-    margin: 1rem;
-  }
-}
+</html>
