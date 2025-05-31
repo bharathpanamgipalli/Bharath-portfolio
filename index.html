@@ -1,117 +1,203 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bharath Panamgipalli - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div id="magic-bg"></div>
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <header>
-    <h1>Bharath Panamgipalli</h1>
-    <p>Java Developer | AI & ML Enthusiast | SQL Specialist</p>
-  </header>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #eee;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Technical Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#internships">Internships & Training</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+/* Text enhancements */
+h1, h2, h3, p, li, a {
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a passionate Java Developer with a strong interest in Artificial Intelligence and Machine Learning. I enjoy solving real-world problems using clean code, structured logic, and cutting-edge technologies like Python, Java, SQL, and deep learning frameworks.</p>
-  </section>
+/* Floating cube background */
+#magic-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
 
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>B.Tech in Computer Science</strong> – Dr. M.G.R Educational and Research Institute – 2021–2025</li>
-      <li><strong>Intermediate</strong> – Sri Sarada Educational Institutions – 2019–2021</li>
-      <li><strong>High School</strong> – S.V.V.E.M High School – 2019</li>
-    </ul>
-  </section>
+#magic-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15, 32, 39, 0.8);
+  z-index: 0;
+}
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>Languages: Java, Python, C, C++</li>
-      <li>Web Development: HTML, CSS, JavaScript, Angular.js, Flask</li>
-      <li>Mobile App: Android Studio (Java/Kotlin)</li>
-      <li>Tools: Git, VS Code, IntelliJ, Power BI</li>
-      <li>Concepts: Data Structures & Algorithms (DSA), AI/ML, SQL, Java OOPs</li>
-    </ul>
-  </section>
+.magic-cube {
+  position: absolute;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border-radius: 8px;
+  opacity: 0.6;
+  animation: floatRotate infinite ease-in-out;
+}
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>Phishing Domain Detection</strong> – Used Random Forest Algorithm with Python API to detect phishing domains through domain-based feature analysis. Built a backend API to deploy the model for real-time detection.
-      </li>
-      <li>
-        <strong>Cancer Cell Detection using MATLAB</strong> – Implemented AI-powered detection using image processing techniques like Otsu’s method and Watershed segmentation with MATLAB and Random Forest classifiers.
-      </li>
-      <li>
-        <strong>Digital Currency Investment Predictions</strong> – Built a predictive model using LSTM and Stochastic Multi-Layer Perceptron (MLP) in Python. Designed a user-friendly interface with Streamlit.
-      </li>
-      <li>
-        <strong>Hospital Management System</strong> – Developed a full-fledged standalone web application using Python and Flask to manage patients, appointments, and doctor schedules on a local server.
-      </li>
-    </ul>
-  </section>
+@keyframes floatRotate {
+  0% {
+    transform: translateZ(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateZ(0) rotate(360deg);
+    opacity: 0.8;
+  }
+}
 
-  <section id="internships">
-    <h2>Internships & Training</h2>
-    <ul>
-      <li>
-        <strong>Apprenticeship – QSpiders</strong>  
-        Trained in Core Java and SQL with practical exposure to web technologies. Gained hands-on experience with backend logic, data operations, and real-time problem-solving in Java.
-      </li>
-      <li>
-        <strong>Python with Data Science – TeachNook</strong>  
-        Learned Python fundamentals, data manipulation with NumPy and Pandas, data visualization with Matplotlib and Seaborn, and an introduction to machine learning using scikit-learn.
-      </li>
-    </ul>
-  </section>
+/* Header */
+header {
+  background: #1f2e3b;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <p><a href="resume.pdf" download target="_blank" rel="noopener noreferrer">Download Here</a></p>
-  </section>
+header h1 {
+  font-size: 2.5rem;
+  color: #00d2ff;
+}
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Phone Number: +91 6304764478</p>
-    <p>Email: <a href="mailto:psvnbharath@gmail.com">psvnbharath@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/itz-bharath/" target="_blank" rel="noopener noreferrer">linkedin.com/in/itz-bharath</a></p>
-    <p>GitHub: <a href="https://github.com/bharathpanamgipalli" target="_blank" rel="noopener noreferrer">github.com/bharathpanamgipalli</a></p>
-  </section>
+header p {
+  font-size: 1.2rem;
+  color: #ffffffc0;
+}
 
-  <footer>
-    <p>&copy; 2025 Bharath Panamgipalli. All rights reserved.</p>
-  </footer>
+/* Navigation */
+nav {
+  background: #263545;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
 
-  <script>
-    const bg = document.getElementById("magic-bg");
-    for (let i = 0; i < 30; i++) {
-      const cube = document.createElement("div");
-      cube.className = "magic-cube";
-      const size = Math.random() * 30 + 10;
-      cube.style.width = cube.style.height = size + "px";
-      cube.style.left = Math.random() * 100 + "vw";
-      cube.style.top = Math.random() * 100 + "vh";
-      cube.style.animationDuration = Math.random() * 20 + 10 + "s";
-      bg.appendChild(cube);
-    }
-  </script>
-</body>
-</html>
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00c6ff;
+  text-shadow: 0 0 12px #00c6ff;
+}
+
+/* Sections */
+section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+h2 {
+  color: #00c6ff;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #00c6ff;
+  padding-bottom: 0.5rem;
+}
+
+ul {
+  list-style: disc inside;
+  margin-top: 1rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
+
+/* Links and Buttons */
+a {
+  color: #1abc9c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #00e6e6;
+}
+
+section#resume a {
+  background: #00c6ff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+section#resume a:hover {
+  background: #008fcc;
+}
+
+/* Contact Section */
+#contact p {
+  margin-bottom: 0.8rem;
+}
+
+/* Footer */
+footer {
+  background: #1f2e3b;
+  color: #ccc;
+  text-align: center;
+  padding: 1.2rem 0;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
